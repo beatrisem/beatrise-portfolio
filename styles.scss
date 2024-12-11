@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@import "styles/colors";
+@import "styles/fonts";
+@import "styles/spacings";
+@import "styles/typography";
+@import "styles/animations";
+
+html {
+  scroll-behavior: smooth;
+  font-family: $Inter, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  --text-color: var(--primary-500);
+  --bkg-color: var(--primary-300);
+  --border-color: var(--primary-500);
+  --btn-txt-color: var(--primary-500);
+  --btn-bg-color: var(--primary-300);
+  --accent-color: var(--primary-200);
+
+  /* Wildcard for Every Element in The Site. */
+  * {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+
+  .grecaptcha-badge {
+    visibility: hidden;
+  }
+
+  /* Sites Custom Content Container. */
+  .custom-container {
+    width: 100%;
+    max-width: 85rem;
+    margin: 0 auto;
+  }
+}
+
+body.dark-theme {
+  --text-color: var(--dark-primary-300);
+  --bkg-color: var(--dark-primary-500);
+  --border-color: var(--dark-primary-300);
+  --btn-txt-color: var(--dark-primary-300);
+  --btn-bg-color: var(--dark-primary-500);
+  --accent-color: var(--dark-primary-200);
+}

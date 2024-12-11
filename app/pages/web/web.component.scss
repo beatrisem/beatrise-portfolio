@@ -1,0 +1,68 @@
+.web {
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  min-height: calc(90vh - 64px);
+  background-color: var(--bkg-color);
+
+  /* Section Title Styling. */
+  section-title {
+    grid-column: span 2;
+  }
+
+  /* Web Description Styling. */
+  .web-description {
+    display: flex;
+    align-items: center;
+    padding: 0 var(--padding-lg);
+    border-right: 1px solid var(--border-color);
+  }
+
+  /* Web Game Styling. */
+  .web-game {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--padding-lg);
+    background-color: var(--bkg-color);
+
+    canvas {
+      background-color: var(--bkg-color);
+      border: 1px solid var(--text-color);
+    }
+  }
+}
+
+/* Media Quarry for Screens (Max Width: 1100px). */
+@media only screen and (max-width: 1100px) {
+  .web {
+    display: flex;
+    flex-direction: column;
+
+    .web-description {
+      min-height: 250px;
+      padding-bottom: var(--padding-md);
+      border-right: none;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .web-game {
+      padding-top: var(--padding-md);
+      padding-bottom: var(--padding-xl);
+    }
+  }
+}
+
+/* Media Quarry for Screens (Max Width: 450px). */
+@media only screen and (max-width: 450px) {
+  .web {
+
+    .web-description {
+      border: none;
+    }
+
+    .web-game {
+      padding: 0;
+    }
+  }
+}

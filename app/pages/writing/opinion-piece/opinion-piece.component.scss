@@ -1,0 +1,99 @@
+.opinion-piece-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  background-color: var(--bkg-color);
+
+  .article-title {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-lg);
+    padding: var(--padding-lg);
+    text-align: center;
+    p {
+      color: var(--accent-color);
+    }
+  }
+
+  .article-wrapper {
+    position: relative;
+    text-align: justify;
+    padding-bottom: var(--padding-lg);
+
+    .article-part-one, .article-part-two {
+      position: relative;
+
+      .content-one, .content-two{
+        display: block;
+        flex-wrap: wrap;
+        padding: 0 30%;
+      }
+
+      .quoteOne, .quoteTwo{
+        max-width: 300px;
+        height: auto;
+        padding: var(--padding-md);
+        text-align: left;
+        border: 1px solid var(--accent-color);
+        color: var(--accent-color);
+      }
+      .quoteOne{
+        float: right;
+        margin: 0 25% 0 var(--margin-md);
+      }
+
+      .quoteTwo{
+        float: left;
+        margin: var(--margin-md) var(--margin-md) var(--margin-sm) 25%;
+      }
+    }
+    .content-three {
+      display: block;
+      flex-wrap: wrap;
+      padding: 0 30%;
+    }
+  }
+}
+
+/* Media Quarry for Writing Page Max Width (1024px). */
+@media only screen and (max-width: 1024px) {
+  .opinion-piece-wrapper {
+    .article-wrapper {
+      .article-part-one, .article-part-two {
+        .content-one, .content-two{
+          padding: 0 5%;
+        }
+        .quoteOne{
+          float: right;
+          margin: 0 5% 0 var(--margin-sm);
+        }
+
+        .quoteTwo{
+          float: left;
+          margin: 0 var(--margin-sm) 0 5%;
+        }
+      }
+      .content-three {
+        padding: 0 5%;
+      }
+    }
+  }
+}
+
+/* Media Quarry for Writing Page Max Width (455px). */
+@media only screen and (max-width: 455px) {
+  .opinion-piece-wrapper {
+    .article-wrapper {
+      .article-part-one, .article-part-two {
+        .quoteOne, .quoteTwo{
+          display: block;
+          max-width: 465px;
+          margin: var(--margin-sm);
+        }
+      }
+    }
+  }
+}
+
+

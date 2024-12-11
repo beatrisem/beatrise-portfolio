@@ -1,0 +1,53 @@
+:root {
+  --primary-100: #AD0213;
+  --primary-200: #D28C8C;
+  --primary-300: #F7E6E7;
+  --primary-400: #d1d1d1;
+  --primary-500: #110002;
+
+  --dark-primary-100: #AD0213;
+  --dark-primary-200: #964848;
+  --dark-primary-300: #F7E6E7;
+  --dark-primary-400: #B0B0B0;
+  --dark-primary-500: #110002;
+}
+
+.primary-100 {
+  color: var(--primary-100);
+}
+
+.primary-200 {
+  color: var(--primary-200);
+}
+
+.primary-300 {
+  color: var(--primary-300);
+}
+
+.primary-400 {
+  color: var(--primary-400);
+}
+
+.dark-primary-500 {
+  color: var(--primary-500);
+}
+
+.dark-primary-100 {
+  color: var(--dark-primary-100);
+}
+
+.dark-primary-200 {
+  color: var(--dark-primary-200);
+}
+
+.dark-primary-300 {
+  color: var(--dark-primary-300);
+}
+
+.dark-primary-400 {
+  color: var(--dark-primary-400);
+}
+
+.dark-primary-500 {
+  color: var(--dark-primary-500);
+}

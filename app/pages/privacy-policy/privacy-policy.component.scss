@@ -1,0 +1,32 @@
+.privacy-policy {
+  margin: 0 auto;
+  padding: var(--padding-lg) 25vw;
+  background-color: var(--bkg-color);
+
+  h1 {
+    margin-top: var(--margin-md);
+  }
+
+  h2 {
+    margin-top: var(--margin-md);
+    color: var(--accent-color);
+  }
+
+  p, ul {
+    margin: var(--margin-sm) 0;
+    line-height: 1.6;
+  }
+
+  ul {
+    li {
+      margin-bottom:  var(--margin-sm);
+    }
+  }
+}
+
+/* Media Quarry for Screens (Max Width: 800px). */
+@media only screen and (max-width: 800px) {
+  .privacy-policy {
+    padding: var(--padding-md) 10vw;
+  }
+}

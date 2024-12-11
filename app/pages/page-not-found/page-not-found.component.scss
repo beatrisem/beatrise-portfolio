@@ -1,0 +1,22 @@
+.container-404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 0 var(--padding-xl);
+  background-color: var(--bkg-color);
+
+  .error-title {
+    color: var(--accent-color);
+    margin-bottom: var(--margin-sm);
+  }
+
+  .error-message {
+    color: var(--text-color);
+    margin-bottom: var(--margin-lg);
+    max-width: 600px;
+    line-height: 1.5;
+  }
+}

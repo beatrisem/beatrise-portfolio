@@ -1,0 +1,38 @@
+<main class="art">
+  <!--Art Page Banner-->
+  <section-title [title]="'ART'"/>
+
+  <!--Art Filters-->
+  <filter-buttons
+    [buttons]="filterButtons"
+    (buttonClicked)="onFilterButtonClicked($event)"
+  ></filter-buttons>
+
+
+  <!--Art Content-->
+  <section class="art-section" role="region"
+           aria-label="Portfolio Art Page Section for Showing Projects and Work Involving Art">
+    <ul class="section-list">
+
+      <li *ngFor="let entity of getCurrentFilteredData(); let i = index" class="list-entity">
+
+        <img class="entity-image" [src]="entity.cover" alt="entity-image">
+
+        <div class="image-overlay" (click)="showOverlay(getImagesForCurrentFilter(), i)">
+          <h2 class="overlay-title heading-6">{{ entity.title }}</h2>
+          <p class="overlay-year body-2">{{ entity.year }}</p>
+        </div>
+
+      </li>
+    </ul>
+  </section>
+
+  <!--Art Gallery Overlay-->
+  <gallery-overlay
+    *ngIf="isOverlayOpen"
+    [images]="filteredImages"
+    [selectedIndex]="selectedIndex"
+    (closeOverlay)="closeOverlay()">
+  </gallery-overlay>
+
+</main>

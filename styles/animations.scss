@@ -1,0 +1,70 @@
+:root {
+  --opacityAnimation: opacityAnimation 0.3s ease-in-out;
+  --fadeInAnimation: fadeInAnimation 0.5s ease-in-out forwards;
+  --slideInRightAnimation: slideInRightAnimation 0.7s ease-in-out forwards;
+  --slideInLeftAnimation: slideInLeftAnimation 0.7s ease-in-out forwards;
+  --scaleUpAnimation: scaleUpAnimation 0.5s ease-in-out forwards;
+  --scaleDownAnimation: scaleDownAnimation 0.5s ease-in-out forwards;
+}
+
+@keyframes opacityAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRightAnimation {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeftAnimation {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUpAnimation {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleDownAnimation {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}

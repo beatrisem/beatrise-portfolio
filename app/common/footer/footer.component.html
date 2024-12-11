@@ -1,0 +1,121 @@
+<footer class="common-footer">
+  <!--Footer Top-->
+  <section class="footer-top">
+
+    <!--Top Left Side-->
+    <article class="top-left-side" role="region">
+      <div class="side-logo">
+        <span class="logo" routerLink="home" aria-label="Logo with Navigation to Home">
+          <svg class="logo-icon" viewBox="0 0 172 24" role="img" aria-label="Portfolio Page Footer Logo">
+            <path [attr.d]="assetsService.websiteLogo"></path>
+          </svg>
+        </span>
+
+        <p class="body-1">
+          Copywriter, front-end developer and illustrator
+        </p>
+      </div>
+
+      <ul class="left-side-socials" aria-label="Find Me on Social Media">
+        <li class="social-entity">
+          <a href="https://www.instagram.com/beatrise_illustration" TARGET = "_blank">
+            <svg class="entity-icon" viewBox="0 0 95 95" role="img" aria-label="Instagram Logo">
+              <path [attr.d]="assetsService.instagramIcon"></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </article>
+
+    <!--Top Page Links-->
+    <article class="top-page-links" role="region" aria-label="Footer Navigation of Pages on the Portfolio Website">
+      <div class="page-link-title">
+        <span class="body-2">
+          PAGES
+        </span>
+      </div>
+
+      <!--Page Links List-->
+      <ul class="page-link-list">
+        <li routerLink="contact-me" aria-label="Navigation to Contact Me Page">
+          <span class="body-1">
+            Contact Me
+          </span>
+        </li>
+
+        <li routerLink="home" aria-label="Navigation to Home Page">
+          <span class="body-1">
+            Home
+          </span>
+        </li>
+
+        <li routerLink="web-works" aria-label="Navigation to Web Projects Page">
+          <span class="body-1">
+            Web Projects
+          </span>
+        </li>
+
+        <li routerLink="art" aria-label="Navigation to Art Page">
+          <span class="body-1">
+            Art
+          </span>
+        </li>
+
+        <li routerLink="writing" aria-label="Navigation to Writing Page">
+          <span class="body-1">
+            Writing
+          </span>
+        </li>
+      </ul>
+    </article>
+
+    <!--Misc Links-->
+    <article class="top-misc-links" role="region"  aria-label="Footer Navigation of MISC Links on the Portfolio Website">
+      <div class="misc-link-title">
+        <span class="body-2">
+          MISC
+        </span>
+      </div>
+
+      <ul class="page-link-list">
+        <li routerLink="privacy-policy" aria-label="Navigation to Privacy Policy Page">
+          <span class="body-1">
+            Privacy Policy
+          </span>
+        </li>
+      </ul>
+    </article>
+
+    <!--Right Side-->
+    <article class="top-right-side" role="region">
+      <!--Current Location-->
+      <div class="right-side-location" aria-label="My Current Location">
+        <p class="body-4 location-title">
+          CURRENT LOCATION:
+        </p>
+
+        <p class="body-lg location">
+          RIGA, LATVIA
+        </p>
+      </div>
+
+      <!--Local Time-->
+      <div class="right-side-time-group" aria-label="My Local Time">
+        <p class="body-4 time-title">
+          MY LOCAL TIME:
+        </p>
+
+        <p class="body-lg time">
+          {{ localTime }}
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <!--Copyright-->
+  <article class="footer-copyright">
+    <span class="body-1">
+      © BEATRISE MAZJANE 2024 | ALL RIGHTS RESERVED
+    </span>
+  </article>
+</footer>

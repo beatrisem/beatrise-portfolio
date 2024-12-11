@@ -1,0 +1,52 @@
+<main class="writing">
+  <!--Writing Page Banner-->
+  <section-title [title]="'WRITING'"/>
+
+  <!--Writing Filters-->
+  <filter-buttons
+    [buttons]="filterButtons"
+    (buttonClicked)="onFilterButtonClicked($event)"
+  ></filter-buttons>
+
+  <!--Writing Section-->
+  <section class="writing-section">
+    <ul class="section-list">
+
+      <!--Opinion Pieces List-->
+      @if (opinionFilter) {
+        @for (entity of opinionPiecesDataList; track entity) {
+          <li class="list-entity" [routerLink]="['/writing/opinion-pieces', entity.route]">
+            <div class="entity-opinion-pieces">
+              <h2 class="opinion-pieces-title heading-6">
+                {{ entity.title }}
+              </h2>
+
+              <p class="opinion-pieces-description body-2">
+                {{ entity.excerpt }}
+              </p>
+            </div>
+          </li>
+        }
+      }
+
+      <!--Travel List-->
+      @if (travelFilter) {
+        @for (entity of travelDataList; track entity) {
+          <li class="list-entity" [routerLink]="['/writing/travel', entity.route]">
+            <div class="entity-travel">
+              <h2 class="travel-title heading-6">
+                {{ entity.title }}
+              </h2>
+
+              <p class="travel-description body-2">
+                {{ entity.description }}
+              </p>
+            </div>
+
+            <img class="entity-travel-image" [src]="entity.cover" alt="travel-image">
+          </li>
+        }
+      }
+    </ul>
+  </section>
+</main>

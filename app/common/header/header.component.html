@@ -1,0 +1,64 @@
+<nav class="common-header">
+  <!--Header Logo-->
+  <span class="header-logo" routerLink="home">
+    <svg class="logo" viewBox="0 0 172 24" role="img" aria-label="Portfolio Page Header Logo">
+      <path [attr.d]="assetsService.websiteLogo"></path>
+    </svg>
+  </span>
+
+  <!--Header Buttons-->
+  <section class="header-buttons" role="region" aria-label="Header Theme Switch and Navigation Buttons">
+    <button class="button-theme" aria-labelledby="theme" (click)="toggleDarkTheme()">
+      <svg class="theme-icon" viewBox="0 0 90 90" role="img" [ngClass]="{ 'visible': isLightMode }">
+        <path [attr.d]="assetsService.darkModeIcon"></path>
+      </svg>
+
+      <svg class="theme-icon" viewBox="0 0 66 66" role="img" [ngClass]="{ 'visible': !isLightMode }">
+        <path [attr.d]="assetsService.lightModeIcon"></path>
+      </svg>
+    </button>
+
+    <div class="aria-label" id="theme">Button Theme Change</div>
+
+    <button class="button-navigation" role="button" aria-label="Menu Button for Page Navigation" [ngClass]="{'active': toggle}" (click)="toggleMenu()">
+      <span class="navigation-title">
+        MENU
+      </span>
+
+      <div class="navigation-hamburger">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </div>
+    </button>
+  </section>
+
+  <!--Header Navigation-->
+  <section class="header-navigation" role="region" aria-label="Opened Full Page Navigation" [ngClass]="{'active': toggle}">
+    <ul class="navigation-list">
+      <li class="list-route" routerLink="writing"  aria-label="Navigate to Writing Page" (click)="toggleMenu()">
+        <span class="heading-1-menu route-title">
+          WRITING
+        </span>
+      </li>
+
+      <li class="list-route" routerLink="art" aria-label="Navigate to Art Page" (click)="toggleMenu()">
+        <span class="heading-1-menu route-title">
+          ART
+        </span>
+      </li>
+
+      <li class="list-route" routerLink="web-works" aria-label="Navigate to Web Works Page" (click)="toggleMenu()">
+        <span class="heading-1-menu route-title">
+          WEB
+        </span>
+      </li>
+
+      <li class="list-route" routerLink="contact-me" aria-label="Navigate to Contact Me Page" (click)="toggleMenu()">
+        <span class="heading-1-menu route-title">
+          CONTACT
+        </span>
+      </li>
+    </ul>
+  </section>
+</nav>

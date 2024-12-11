@@ -1,0 +1,25 @@
+<div class="overlay" (click)="close()">
+
+  <button class="close-button" (click)="close()">
+    <svg class="button-icon" viewBox="0 0 120 120">
+      <path [attr.d]="assetsService.closeIcon"></path>
+    </svg>
+  </button>
+
+  <div class="overlay-content" (click)="$event.stopPropagation()">
+    <img [src]="images[selectedIndex]" alt="gallery-image" class="overlay-image"/>
+  </div>
+
+  <button class="nav-button-left" (click)="prevImage(); $event.stopPropagation()">
+    <svg class="arrow-left" viewBox="0 0 62 62">
+      <path [attr.d]="assetsService.leftArrowIcon"></path>
+    </svg>
+  </button>
+
+  <button class="nav-button-right" (click)="nextImage(); $event.stopPropagation()">
+    <svg class="arrow-right" viewBox="0 0 62 62">
+      <path [attr.d]="assetsService.rightArrowIcon"></path>
+    </svg>
+  </button>
+
+</div>

@@ -1,0 +1,136 @@
+@import "fonts";
+
+.heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .heading-6 {
+  font-family: $Harmond, serif;
+  line-height: 100%;
+  text-decoration: none;
+  margin: 0;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.heading-xl {
+  font-family: $Harmond, serif;
+  line-height: 80%;
+  text-decoration: none;
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(3em, 15vw, 15em);
+  letter-spacing: 0;
+  color: var(--text-color);
+}
+
+.heading-lg {
+  font-family: $Harmond, serif;
+  line-height: 80%;
+  text-decoration: none;
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(4em, 12vw, 14em);
+  letter-spacing: 0.1em;
+  color: var(--text-color);
+}
+
+.heading-1-hero {
+  font-family: $Harmond, serif;
+  font-size: clamp(2.5em, 5.5vw, 8em);
+  letter-spacing: 0.2em;
+  color: var(--text-color);
+}
+
+.heading-1-menu {
+  font-family: $Harmond, serif;
+  font-size: clamp(2.5em, 5vw, 8em);
+  letter-spacing: 0.2em;
+  line-height: 100%;
+  text-decoration: none;
+  margin: 0;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.heading-1{
+  font-size: clamp(1.8em, 7.5vw, 8em);
+  letter-spacing: 0.18em;
+}
+
+.heading-2 {
+  font-size: clamp(1.5rem, 5vw, 6rem);
+  letter-spacing: 0.1rem;
+}
+
+.heading-3 {
+  font-size: clamp(2rem, 6vw, 5rem);
+  letter-spacing: 0.1rem;
+}
+
+.heading-4 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  letter-spacing: 0;
+}
+.heading-5 {
+  font-size: clamp(0.7rem, 5vw, 3rem);
+  letter-spacing: 0.1rem;
+}
+.heading-6 {
+  font-size: clamp(1.3rem, 5vw, 1.5rem);
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.heading-with-border {
+  font-family: $Harmond, serif;
+  line-height: 100%;
+  text-decoration: none;
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(2em, 7vw, 10em);
+  letter-spacing: 0.4em;
+  color: var(--text-color);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--text-color);
+}
+
+.body-1, .body-2, .body-3, .body-4, .body-lg{
+  font-family: $Inter, sans-serif;
+  line-height: 150%;
+  text-decoration: none;
+  margin: 0;
+  font-weight: 300;
+  color: var(--text-color);
+}
+
+.body-4 {
+  font-size: clamp(0.4rem, 5vw, 1.3rem);
+  line-height: 2.5rem;
+}
+
+.body-3 {
+  font-size: clamp(0.6rem, 5vw, 1.2rem);
+  line-height: 2.5rem;
+}
+
+.body-2 {
+  font-size: clamp(0.3rem, 5vw, 1rem);
+  line-height: 1.5rem;
+}
+
+.body-1 {
+  font-size: clamp(0.4rem, 5vw, 0.8rem);
+}
+
+.body-lg {
+  font-size: clamp(1rem, 7vw, 2rem);
+}
+
+.logo {
+  font-family: $Harmond, serif;
+  text-decoration: none;
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(1.3rem, 5vw, 1.5rem);
+  line-height: 120%;
+  font-style: italic;
+  letter-spacing: 0;
+  color: var(--text-color);
+}

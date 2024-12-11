@@ -1,0 +1,46 @@
+<div class="travel-wrapper" *ngIf="travelPiece">
+
+  <div class="top-content">
+    <h1 class="heading-4">{{ travelPiece.title }}</h1>
+    <p class="body-4">{{ travelPiece.description }}</p>
+  </div>
+
+  <div class="article-wrapper">
+    <div class="article-part-one">
+      <div [innerHTML]="travelPiece.contentOne" class="content body-2"></div>
+      <img class="imgOne" [src]="travelPiece.imgOne" alt="entity-image">
+    </div>
+
+    <div class="article-part-two">
+      <div [innerHTML]="travelPiece.contentTwo" class="content body-2"></div>
+      <img class="imgTwo" [src]="travelPiece.imgTwo" alt="entity-image">
+    </div>
+
+    <div class="article-part-three">
+      <div [innerHTML]="travelPiece.contentThree" class="content body-2"></div>
+      <img class="imgThree" [src]="travelPiece.imgThree" alt="entity-image">
+    </div>
+
+    <div class="article-part-four">
+      <div [innerHTML]="travelPiece.contentFour" class="content body-2"></div>
+    </div>
+  </div>
+
+  <div class="gallery-container">
+
+    <div class="image-gallery" [ngClass]="{ 'grid-layout': isGridLayout }">
+      <ng-container *ngFor="let img of travelPiece.images; let i = index">
+        <img [src]="img" alt="travel-image" class="dynamic-img" (click)="openOverlay(i)">
+      </ng-container>
+    </div>
+
+    <!--Travel Image Gallery Overlay-->
+    <gallery-overlay *ngIf="isOverlayOpen"
+                     [images]="travelPiece.images"
+                     [selectedIndex]="selectedIndex"
+                     (closeOverlay)="closeOverlay()">
+    </gallery-overlay>
+
+  </div>
+
+</div>

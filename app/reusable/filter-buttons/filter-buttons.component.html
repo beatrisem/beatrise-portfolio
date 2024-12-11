@@ -1,0 +1,15 @@
+<section class="filters">
+
+  <button
+    *ngFor="let button of buttons; let i = index"
+    class="filters-button"
+    (click)="onButtonClick(i)"
+    [ngClass]="{'active': button.isActive}">
+
+    <span class="button-title body-4">
+      {{ button.title }}
+    </span>
+
+  </button>
+
+</section>

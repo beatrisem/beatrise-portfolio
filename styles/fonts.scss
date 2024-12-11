@@ -1,0 +1,37 @@
+$font-path: '/fonts';
+$Inter: 'Inter';
+$Harmond: 'Harmond';
+
+/* Mixin for Generating Font-Face Rules */
+@mixin font-face($font-family, $font-weight, $font-style, $file-name) {
+  @font-face {
+    font-display: swap;
+    font-family: $font-family;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    src: url('#{$font-path}/#{$font-family}/#{$file-name}.otf');
+    //url('#{$font-path}/#{$font-family}/#{$file-name}.woff') format('woff'),
+    //url('#{$font-path}/#{$font-family}/#{$file-name}.woff2') format('woff2'),
+    //url('#{$font-path}/#{$font-family}/#{$file-name}.ttf') format('truetype'),
+    //url('#{$font-path}/#{$font-family}/#{$file-name}.eot'),
+  }
+}
+
+/* Usage of Mixin for Inter Font Variation */
+@include font-face($Inter, 100, normal, 'Inter-Light');
+@include font-face($Inter, 100, italic, 'Inter-LightItalic');
+@include font-face($Inter, 200, normal, 'Inter-Regular');
+@include font-face($Inter, 200, italic, 'Inter-Italic');
+@include font-face($Inter, 300, normal, 'Inter-Medium');
+@include font-face($Inter, 300, italic, 'Inter-MediumItalic');
+@include font-face($Inter, 400, normal, 'Inter-Bold');
+@include font-face($Inter, 400, italic, 'Inter-BoldItalic');
+@include font-face($Inter, 500, normal, 'Inter-Black');
+@include font-face($Inter, 500, italic, 'Inter-BlackItalic');
+
+/* Usage of Mixin for Harmond Font Variation */
+@include font-face($Harmond, 500, normal, 'Harmond-SemiBoldCondensed');
+@include font-face($Harmond, 500, italic, 'Harmond-SemBdItaCond');
+@include font-face($Harmond, 700, normal, 'Harmond-ExtraBoldExpanded');
+@include font-face($Harmond, 700, italic, 'Harmond-ExtBdItaExp');
+

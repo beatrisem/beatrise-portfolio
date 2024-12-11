@@ -1,0 +1,104 @@
+<main class="home">
+
+    <!--Home Hero-->
+    <section class="home-hero">
+
+        <!--Hero Introduction-->
+        <article class="hero-introduction">
+
+            <h1 class="heading-1-hero">
+                Beatrise Mazjane
+            </h1>
+
+            <p class="body-4">
+              Hello there! I'm a Front-End Developer, Copywriter, and Illustrator who loves a good digital adventure.
+              Working from Riga, Latvia, but creating for the world!
+            </p>
+
+        </article>
+
+        <!--Hero Animation Container-->
+        <div class="hero-animation-container">
+
+            <!--Canvas Element-->
+            <canvas #canvasElement class="canvasElement"></canvas>
+        </div>
+
+    </section>
+
+    <!--Home Works-->
+    <ul class="home-works">
+
+        <!--Works Art-->
+        <li routerLink="/art" class="works-art">
+
+            <!--Art Title-->
+            <div class="art-title">
+
+                <p class="title heading-4">
+                    Art
+                </p>
+
+                <svg class="top-right-arrow" viewBox="0 0 62 62">
+                    <path [attr.d]="assetsService.topRightArrowIcon"></path>
+                </svg>
+
+            </div>
+
+            <!--Art Description-->
+            <p class="body-3 art-description">
+              Art that goes beyond the canvas! <br> Check out my collection of oil paintings, sketchbook watercolors, and marker-drawn murals.
+            </p>
+
+        </li>
+
+        <!--Works Web-->
+        <li routerLink="/web-works" class="works-web">
+
+            <!--Web Title-->
+            <div class="web-title">
+
+                <p class="title heading-4">
+                    Web
+                </p>
+
+                <svg class="top-right-arrow" viewBox="0 0 62 62">
+                    <path [attr.d]="assetsService.topRightArrowIcon"></path>
+                </svg>
+
+            </div>
+
+            <!--Web Description-->
+            <p class="body-3 web-description">
+              Designing for the web, one pixel at a time! <br>
+              Take a look at the collection of my latest web creations, combining creativity with responsive, interactive design.
+            </p>
+
+        </li>
+
+        <!--Works Writing-->
+        <li routerLink="/writing" class="works-writing">
+
+            <!--Writing Title-->
+            <div class="writing-title">
+
+                <p class="title heading-4">
+                    Writing
+                </p>
+
+                <svg class="top-right-arrow" viewBox="0 0 62 62">
+                    <path [attr.d]="assetsService.topRightArrowIcon"></path>
+                </svg>
+
+            </div>
+
+            <!--Writing Description-->
+            <p class="body-3 writing-description">
+              Opinionated and on the go! <br>
+              Grab a coffee and explore my blog, where I share my perspective on everything
+              from big and small ideas to new places and experiences.
+            </p>
+
+        </li>
+    </ul>
+</main>

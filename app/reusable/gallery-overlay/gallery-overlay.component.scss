@@ -1,0 +1,78 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+
+  .close-button {
+    cursor: pointer;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    border: none;
+    background: none;
+
+    .button-icon {
+      display: block;
+      height: 35px;
+      width: 35px;
+      stroke-width: 0;
+      fill-rule: evenodd;
+      fill: var(--primary-300);
+      transition: fill 0.3s ease-in;
+    }
+
+    &:hover {
+      .button-icon {
+        fill: var(--primary-200);
+      }
+    }
+  }
+
+  .overlay-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .overlay-image {
+      max-height: 90vh;
+      max-width: 90vw;
+      object-fit: contain;
+    }
+  }
+
+  /* Navigation Button Styling */
+  .nav-button-left, .nav-button-right {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+
+    svg {
+      height: 40px;
+      width: 40px;
+      fill: var(--primary-300);
+      transition: fill 0.3s ease-in;
+    }
+
+    &:hover svg {
+      fill: var(--primary-200);
+    }
+  }
+
+  .nav-button-left {
+    left: 1rem;
+  }
+
+  .nav-button-right {
+    right: 2rem;
+  }
+}

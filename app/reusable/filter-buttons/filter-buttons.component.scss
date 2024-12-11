@@ -1,0 +1,60 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+
+  .filters-button {
+    flex: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+    margin: 0;
+    padding: var(--padding-md) var(--padding-lg);
+    outline: 1px solid var(--border-color);
+    border: none;
+    background-color: var(--bkg-color);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    .button-title {
+      white-space: nowrap;
+      text-transform: uppercase;
+      font-size: clamp(0.4rem, 5vw, 1.3rem);
+      font-weight: 300;
+      line-height: 100%;
+      margin: 0;
+      color: var(--text-color);
+    }
+
+    &:hover {
+      color: var(--text-color);
+      background-color: var(--accent-color);
+    }
+
+    &.active {
+      background: var(--text-color);
+
+      .button-title {
+        color: var(--bkg-color);
+      }
+
+      &:hover {
+        .button-title {
+          color: var(--accent-color);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1165px) {
+  .filters {
+    .filters-button {
+      max-width: 100%;
+    }
+  }
+}
+

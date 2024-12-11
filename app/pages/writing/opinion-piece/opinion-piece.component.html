@@ -1,0 +1,20 @@
+<div class="opinion-piece-wrapper" *ngIf="opinionPiece">
+
+  <div class="article-title">
+    <h1 class="heading-4">{{ opinionPiece.title }}</h1>
+    <p class="body-4">{{ opinionPiece.description }}</p>
+  </div>
+  <div class="article-wrapper">
+    <div class="article-part-one">
+    <div [innerHTML]="opinionPiece.contentOne" class="content-one body-2"></div>
+    <p class="heading-6 quoteOne">{{ opinionPiece.quoteOne }}</p>
+    </div>
+
+    <div class="article-part-two">
+    <div [innerHTML]="opinionPiece.contentTwo" class="content-two body-2"></div>
+    <p class="heading-6 quoteTwo">{{ opinionPiece.quoteTwo }}</p>
+    </div>
+
+    <div [innerHTML]="opinionPiece.contentThree" class="content-three body-2"></div>
+  </div>
+</div>

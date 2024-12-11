@@ -1,0 +1,22 @@
+<main class="web">
+
+  <section-title [title]="'WEB'"/>
+
+  <!--Web Description-->
+  <p class="body-4 web-description">
+    Coming soon! <br>
+    Meanwhile, my dog’s got a mushroom-jumping game to keep you entertained. Jump in and help him dodge those shrooms!
+  </p>
+
+  <!--Game Wrapper-->
+  <div class="web-game">
+
+    <!--Game-->
+    <canvas #gameCanvas width="800" height="400"></canvas>
+
+    <!--Restart Button-->
+    <button-component (click)="startGame()" [label]="'RESTART'"></button-component>
+
+  </div>
+
+</main>

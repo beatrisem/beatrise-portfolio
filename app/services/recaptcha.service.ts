@@ -5,7 +5,7 @@ import {Injectable} from "@angular/core";
 })
 
 export class RecaptchaService {
-  private siteKey: string = '6Lf_8X8qAAAAAJOKwSVHx0MyET2NKJ-DLHyvAOIU';
+  private siteKey: string = '';
 
   public executeRecaptcha(): Promise<string> {
     return new Promise((resolve, reject) => {
